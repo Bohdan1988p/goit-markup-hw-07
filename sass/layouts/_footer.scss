@@ -21,7 +21,7 @@
   .footer-item:first-child {
     margin-top: 0;
   }
-  .logo-footer {
+  .logo__span--white {
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
@@ -112,14 +112,15 @@
   }
   
   .soc-link {
-    display: flex;
+    // display: flex;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     fill: #ffffff;
     background-color: rgba(255, 255, 255, 0.1);
+    @extend %flex-center;
   
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
@@ -177,8 +178,9 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+  @extend %flex-center;
   text-align: center;
   letter-spacing: 0.06em;
   gap: 10px;

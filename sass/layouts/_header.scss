@@ -2,15 +2,18 @@
     background: var(--mainbackdroundcolor);
     border-bottom: 1px solid #ececec;
   }
-  .header-conteiner {
-    display: flex;
-    align-items: center;
+  .header__conteiner {
+    // display: flex;
+    // align-items: center;
+    @extend %flex-center;
+  
   }
-  .header-nav {
-    display: flex;
-    align-items: center;
+  .navigation {
+    // display: flex;
+    // align-items: center;
+    @extend %flex-center;
   }
-  .logo {
+  .logo__link {
     font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -21,21 +24,21 @@
     text-decoration: none;
   }
   
-  .logo-span {
+  .logo__span--black {
     color: var(--logo-color);
   }
-  .logo-box {
+  .logo__box {
     margin-right: 93px;
   }
   
-  .nav-list {
+  .navigation__list {
     display: flex;
     gap: 50px;
   }
   
-  .nav-item {
+  .navigation__item {
   }
-  .nav-link {
+  .navigation__link {
     position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -54,24 +57,31 @@
       fill: var(--akcent);
     }
   }
-  .nav-link.link.current {
+  .navigation__link.link.navigation__link--current {
     color: var(--akcent);
+    &::after{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      height: 4px;
+      width: 100%;
+      background-color: var(--akcent);
+      border-radius: 2px;
+    }
   }
-  .nav-link.link.current::after{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: "";
-    height: 4px;
-    width: 100%;
-    background-color: var(--akcent);
-    border-radius: 2px;
-  }
-  
-
-  .header-icons {
-  }
-  .header-list {
+  // .nav-link.link.current::after{
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   content: "";
+  //   height: 4px;
+  //   width: 100%;
+  //   background-color: var(--akcent);
+  //   border-radius: 2px;
+  // }
+    
+  .contacts {
     display: flex;
     gap: 30px;
     margin-left: auto;
@@ -79,12 +89,13 @@
     padding-bottom: 32px;
     justify-content: center;
   }
-  .header-item {
+  .contacts__item {
   }
   
-  .header-link {
-    display: flex;
-    align-items: center;
+  .contacts__link {
+    // display: flex;
+    // align-items: center;
+    @extend %flex-center;
   
     font-weight: 500;
     font-size: 14px;
@@ -101,7 +112,7 @@
    
   }
  
-  .header-icons {
+  .contacts__icons {
     margin-right: 10px;
     fill: currentColor;
   }
